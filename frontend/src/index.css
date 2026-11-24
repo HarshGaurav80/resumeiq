@@ -1,0 +1,86 @@
+/* Global styles – Tailwind CSS v4 with shadcn/ui-style design tokens. */
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+/* Class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme tokens */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --muted: #f4f4f8;
+  --muted-foreground: #64748b;
+  --border: #e5e7eb;
+  --input: #e2e8f0;
+  --primary: #5b4cf0;
+  --primary-foreground: #ffffff;
+  --accent: #f3f0ff;
+  --accent-foreground: #4c1d95;
+  --ring: #7c3aed;
+  --radius: 0.75rem;
+}
+
+/* Dark theme tokens */
+.dark {
+  --background: #0b0b14;
+  --foreground: #e7e7f0;
+  --card: #13131f;
+  --card-foreground: #e7e7f0;
+  --muted: #1b1b2b;
+  --muted-foreground: #9a9ab3;
+  --border: #27273a;
+  --input: #2d2d44;
+  --primary: #8b7dff;
+  --primary-foreground: #0b0b14;
+  --accent: #211d3d;
+  --accent-foreground: #d7cffd;
+  --ring: #8b5cf6;
+}
+
+/* Expose the tokens as Tailwind colours, e.g. bg-background, text-muted-foreground */
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+/* Brand gradient helpers */
+@utility text-gradient {
+  @apply bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent dark:from-violet-400 dark:to-indigo-400;
+}
+@utility bg-brand {
+  @apply bg-gradient-to-r from-violet-600 to-indigo-600;
+}

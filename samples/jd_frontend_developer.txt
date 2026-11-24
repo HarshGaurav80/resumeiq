@@ -1,0 +1,27 @@
+Job Title: Frontend Developer (Fresher / 0-2 years)
+Company: Skyline Software Labs (fictional)
+Location: Bengaluru
+
+About the role
+Skyline is looking for a Frontend Developer to build fast, accessible and beautiful web applications used by thousands of customers.
+
+Responsibilities
+- Develop responsive user interfaces using React, TypeScript and Tailwind CSS.
+- Integrate REST APIs and manage application state with Redux or similar libraries.
+- Write unit tests with Jest and React Testing Library.
+- Collaborate with UI/UX designers using Figma to implement pixel-perfect designs.
+- Optimize web performance and ensure web accessibility (WCAG) standards.
+- Participate in code reviews and follow Agile/Scrum practices.
+
+Requirements
+- Strong knowledge of HTML, CSS and JavaScript (ES6+).
+- Hands-on experience with React (hooks, components, routing).
+- Familiarity with TypeScript.
+- Experience consuming REST APIs.
+- Version control with Git and GitHub.
+- Understanding of Responsive Design and cross-browser compatibility.
+
+Nice to have
+- Next.js, Node.js or Express.js experience.
+- Knowledge of CI/CD and deploying apps on Vercel or Netlify.
+- A portfolio or GitHub profile with live projects.

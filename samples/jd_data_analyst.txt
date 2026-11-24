@@ -1,0 +1,27 @@
+Job Title: Data Analyst (Entry Level)
+Company: Northwind Analytics (fictional)
+Location: Pune / Hybrid
+
+About the role
+We are hiring a Data Analyst to join our Business Intelligence team. You will turn raw data into clear insights that help product, marketing and operations teams make decisions.
+
+Responsibilities
+- Write efficient SQL queries to extract, clean and analyze data from PostgreSQL and BigQuery.
+- Build and maintain interactive dashboards in Power BI or Tableau.
+- Perform exploratory data analysis and statistical analysis (A/B testing, hypothesis testing, regression analysis).
+- Automate recurring reports using Python (Pandas, NumPy).
+- Present findings to stakeholders and translate business questions into analysis.
+- Work with data engineers on ETL pipelines and data quality checks.
+
+Requirements
+- Bachelor's degree in Computer Science, Statistics, Mathematics or a related field.
+- Strong SQL and Advanced Excel skills (Pivot Tables, VLOOKUP).
+- Experience with Python for data analysis (Pandas, NumPy, Matplotlib).
+- Hands-on experience with Power BI or Tableau.
+- Good understanding of statistics and data visualization best practices.
+- Excellent communication and problem solving skills.
+
+Nice to have
+- Experience with Google BigQuery, Looker or Airflow.
+- Knowledge of Machine Learning basics.
+- Google Data Analytics or Microsoft PL-300 certification.
