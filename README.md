@@ -220,7 +220,7 @@ The backend goes on **Render** and the website on **Vercel**. Both have free pla
 1. **Put the project on GitHub.** Create an empty repository on github.com, then push this `resumeiq/` folder to it.
 2. **Backend on Render.**
    - On render.com, choose **New + → Blueprint** and pick the repository. Render reads `render.yaml` and creates
-     the `resumeiq-api` web service.
+     the `resumeiq-harsh` web service.
    - Optional: in the service's **Environment** tab, paste your `GEMINI_API_KEY`.
    - When it's live, copy its address, e.g. `https://resumeiq-api.onrender.com`, and open `/api/health` on it to check.
 3. **Website on Vercel.**

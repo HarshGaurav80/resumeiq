@@ -2,7 +2,7 @@
 # In Render: New + → Blueprint → pick this repository. Render reads this file.
 services:
   - type: web
-    name: resumeiq-api
+    name: resumeiq-harsh
     runtime: python
     plan: free
     rootDir: backend
