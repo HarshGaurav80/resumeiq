@@ -6,7 +6,7 @@ export const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
 
 // Shown when the backend can't be reached. A free hosted backend sleeps when idle and
 // takes up to a minute to wake, so the hosted build suggests waiting and retrying.
-const UNREACHABLE = API_BASE
+const UNREACHABLE = API_BASE || import.meta.env.PROD
   ? "The ResumeIQ server is waking up or unavailable. Please wait 30–60 seconds and try again."
   : "Cannot reach the ResumeIQ server. Is the backend running on port 8000?";
 

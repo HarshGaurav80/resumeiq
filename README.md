@@ -209,6 +209,12 @@ To recreate the sample resumes, run `python ../samples/generate_samples.py` from
 
 ## Deploying for free (public link)
 
+**Simplest: one Render service.** The built website is kept in `backend/static/`, and the backend serves it, so
+the Render service from step 2 below is the whole app: its `https://….onrender.com` address is the website.
+After changing the frontend, run `npm run build:backend` in `frontend/` and push.
+
+The steps below also cover hosting the website separately on Vercel, which is optional.
+
 The backend goes on **Render** and the website on **Vercel**. Both have free plans and sign in with GitHub.
 
 1. **Put the project on GitHub.** Create an empty repository on github.com, then push this `resumeiq/` folder to it.

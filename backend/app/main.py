@@ -144,3 +144,26 @@ def download_report(analysis_id: int):
     stem = re.sub(r"[^A-Za-z0-9_-]+", "_", Path(record["file_name"]).stem)[:50] or "resume"
     return Response(pdf, media_type="application/pdf",
                     headers={"Content-Disposition": f'attachment; filename="ResumeIQ_Report_{stem}.pdf"'})
+
+
+# --------------------------------------------------------------------------------------
+# Website (single-service hosting)
+# --------------------------------------------------------------------------------------
+# When the React app has been built into backend/static (npm run build:backend), this
+# backend also serves the website, so one free Render service hosts the whole app.
+# Registered last so every /api route above takes priority.
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+
+if (STATIC_DIR / "index.html").is_file():
+    from fastapi.responses import FileResponse
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    def serve_website(full_path: str):
+        if full_path.startswith("api/"):
+            raise HTTPException(404, "Not found.")
+        candidate = (STATIC_DIR / full_path).resolve()
+        # Serve real files (JS, CSS, fonts, favicon); anything else is a page route
+        # such as /results/3, which the React router handles inside index.html.
+        if full_path and candidate.is_file() and STATIC_DIR in candidate.parents:
+            return FileResponse(candidate)
+        return FileResponse(STATIC_DIR / "index.html")
